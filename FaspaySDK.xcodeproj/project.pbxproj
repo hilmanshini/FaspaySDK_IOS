@@ -1,0 +1,1105 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B03523B22AE9D7900C65255 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03523A22AE9D7900C65255 /* BaseError.swift */; };
+		0B13264022A89C1C00B7FDBA /* FaspaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B13263E22A89C1C00B7FDBA /* FaspaySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B13264C22A89D0F00B7FDBA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13264B22A89D0F00B7FDBA /* ApiService.swift */; };
+		0B13264F22A89D4400B7FDBA /* FaspayUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13264E22A89D4400B7FDBA /* FaspayUser.swift */; };
+		0B13265122A89D5800B7FDBA /* CreateBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13265022A89D5800B7FDBA /* CreateBilling.swift */; };
+		0B13265322A89D7E00B7FDBA /* PaymentChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13265222A89D7E00B7FDBA /* PaymentChannel.swift */; };
+		0B13265722A89DAB00B7FDBA /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13265622A89DAB00B7FDBA /* SHA1.swift */; };
+		0B13265922A89DBD00B7FDBA /* PaymentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13265822A89DBD00B7FDBA /* PaymentStatus.swift */; };
+		0B13265B22A89DCF00B7FDBA /* CancelPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13265A22A89DCF00B7FDBA /* CancelPayment.swift */; };
+		0B13265D22A89DE700B7FDBA /* FaspayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B13265C22A89DE700B7FDBA /* FaspayService.swift */; };
+		0B5B5A3622C374D600833DCE /* ConfigCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5B5A3522C374D600833DCE /* ConfigCredit.swift */; };
+		0BC9FA4C22C37F9500A50883 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9FA4B22C37F9500A50883 /* Capture.swift */; };
+		0BC9FA4E22C383D900A50883 /* SB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9FA4D22C383D900A50883 /* SB.swift */; };
+		0BC9FA6E22C38E0B00A50883 /* FaspaySDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC9FA6D22C38E0B00A50883 /* FaspaySDKTests.swift */; };
+		0BC9FA7022C38E0B00A50883 /* FaspaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B13263B22A89C1C00B7FDBA /* FaspaySDK.framework */; };
+		0BD2EE1B22C45B9500AEE1FC /* FaspaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B13263B22A89C1C00B7FDBA /* FaspaySDK.framework */; };
+		0BD2EE1C22C45B9500AEE1FC /* FaspaySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B13263B22A89C1C00B7FDBA /* FaspaySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0BD2EE2122C46D7400AEE1FC /* Faspay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2EE2022C46D7400AEE1FC /* Faspay.swift */; };
+		0BD2EE2322C46EE600AEE1FC /* Inquiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2EE2222C46EE600AEE1FC /* Inquiry.swift */; };
+		0BD2EE2522C4758D00AEE1FC /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2EE2422C4758D00AEE1FC /* Payment.swift */; };
+		0BD2EE2722C4794800AEE1FC /* PaymentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2EE2622C4794800AEE1FC /* PaymentWrapper.swift */; };
+		0BD2EE2922C4851800AEE1FC /* Refund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2EE2822C4851800AEE1FC /* Refund.swift */; };
+		0BD2EE2B22C489A500AEE1FC /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2EE2A22C489A500AEE1FC /* Void.swift */; };
+		0BFFB9C822C3A6DD00255EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFB9C722C3A6DD00255EAF /* AppDelegate.swift */; };
+		0BFFB9CA22C3A6DD00255EAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFB9C922C3A6DD00255EAF /* ViewController.swift */; };
+		0BFFB9CD22C3A6DD00255EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFB9CB22C3A6DD00255EAF /* Main.storyboard */; };
+		0BFFB9CF22C3A6DE00255EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFB9CE22C3A6DE00255EAF /* Assets.xcassets */; };
+		0BFFB9D222C3A6DE00255EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFFB9D022C3A6DE00255EAF /* LaunchScreen.storyboard */; };
+		0BFFB9DD22C3A6DE00255EAF /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFB9DC22C3A6DE00255EAF /* testTests.swift */; };
+		0BFFB9E822C3A6DF00255EAF /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFFB9E722C3A6DF00255EAF /* testUITests.swift */; };
+		856B67FDB39D4571B1C91745 /* Pods_FaspaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4FE2C1BF8677ABB21C9718 /* Pods_FaspaySDK.framework */; };
+		9A04159C19B2D5B9A5E81031 /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1821FCBC432772DDE03FFB4 /* Pods_test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BC9FA7122C38E0B00A50883 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B13263222A89C1C00B7FDBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B13263A22A89C1C00B7FDBA;
+			remoteInfo = FaspaySDK;
+		};
+		0BD2EE1D22C45B9500AEE1FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B13263222A89C1C00B7FDBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B13263A22A89C1C00B7FDBA;
+			remoteInfo = FaspaySDK;
+		};
+		0BFFB9D922C3A6DE00255EAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B13263222A89C1C00B7FDBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BFFB9C422C3A6DC00255EAF;
+			remoteInfo = test;
+		};
+		0BFFB9E422C3A6DE00255EAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B13263222A89C1C00B7FDBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BFFB9C422C3A6DC00255EAF;
+			remoteInfo = test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0BD2EE1F22C45B9500AEE1FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0BD2EE1C22C45B9500AEE1FC /* FaspaySDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0B03523A22AE9D7900C65255 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		0B13263B22A89C1C00B7FDBA /* FaspaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FaspaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B13263E22A89C1C00B7FDBA /* FaspaySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaspaySDK.h; sourceTree = "<group>"; };
+		0B13263F22A89C1C00B7FDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B13264B22A89D0F00B7FDBA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		0B13264E22A89D4400B7FDBA /* FaspayUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaspayUser.swift; sourceTree = "<group>"; };
+		0B13265022A89D5800B7FDBA /* CreateBilling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBilling.swift; sourceTree = "<group>"; };
+		0B13265222A89D7E00B7FDBA /* PaymentChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentChannel.swift; sourceTree = "<group>"; };
+		0B13265622A89DAB00B7FDBA /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		0B13265822A89DBD00B7FDBA /* PaymentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatus.swift; sourceTree = "<group>"; };
+		0B13265A22A89DCF00B7FDBA /* CancelPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelPayment.swift; sourceTree = "<group>"; };
+		0B13265C22A89DE700B7FDBA /* FaspayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaspayService.swift; sourceTree = "<group>"; };
+		0B5B5A3522C374D600833DCE /* ConfigCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigCredit.swift; sourceTree = "<group>"; };
+		0BC9FA4B22C37F9500A50883 /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
+		0BC9FA4D22C383D900A50883 /* SB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SB.swift; sourceTree = "<group>"; };
+		0BC9FA6122C38D2F00A50883 /* TestFaspayUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFaspayUI.swift; sourceTree = "<group>"; };
+		0BC9FA6322C38D2F00A50883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BC9FA6B22C38E0B00A50883 /* FaspaySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaspaySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC9FA6D22C38E0B00A50883 /* FaspaySDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaspaySDKTests.swift; sourceTree = "<group>"; };
+		0BC9FA6F22C38E0B00A50883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD2EE2022C46D7400AEE1FC /* Faspay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faspay.swift; sourceTree = "<group>"; };
+		0BD2EE2222C46EE600AEE1FC /* Inquiry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inquiry.swift; sourceTree = "<group>"; };
+		0BD2EE2422C4758D00AEE1FC /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		0BD2EE2622C4794800AEE1FC /* PaymentWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWrapper.swift; sourceTree = "<group>"; };
+		0BD2EE2822C4851800AEE1FC /* Refund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refund.swift; sourceTree = "<group>"; };
+		0BD2EE2A22C489A500AEE1FC /* Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Void.swift; sourceTree = "<group>"; };
+		0BFFB9C522C3A6DC00255EAF /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BFFB9C722C3A6DD00255EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0BFFB9C922C3A6DD00255EAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0BFFB9CC22C3A6DD00255EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0BFFB9CE22C3A6DE00255EAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0BFFB9D122C3A6DE00255EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0BFFB9D322C3A6DE00255EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BFFB9D822C3A6DE00255EAF /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BFFB9DC22C3A6DE00255EAF /* testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
+		0BFFB9DE22C3A6DE00255EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BFFB9E322C3A6DE00255EAF /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BFFB9E722C3A6DF00255EAF /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
+		0BFFB9E922C3A6DF00255EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4FE2C1BF8677ABB21C9718 /* Pods_FaspaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaspaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F725002CD9A4B52AFA0BF76 /* Pods-FaspaySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaspaySDK.release.xcconfig"; path = "Target Support Files/Pods-FaspaySDK/Pods-FaspaySDK.release.xcconfig"; sourceTree = "<group>"; };
+		9C4E9CE7E849B4EDF474F778 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
+		B1821FCBC432772DDE03FFB4 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF58F84B8ADC5C57AAD627A2 /* Pods-FaspaySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaspaySDK.debug.xcconfig"; path = "Target Support Files/Pods-FaspaySDK/Pods-FaspaySDK.debug.xcconfig"; sourceTree = "<group>"; };
+		F5D7F284C70D909953AD95DA /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B13263822A89C1C00B7FDBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				856B67FDB39D4571B1C91745 /* Pods_FaspaySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BC9FA6822C38E0B00A50883 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC9FA7022C38E0B00A50883 /* FaspaySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9C222C3A6DC00255EAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD2EE1B22C45B9500AEE1FC /* FaspaySDK.framework in Frameworks */,
+				9A04159C19B2D5B9A5E81031 /* Pods_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9D522C3A6DE00255EAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9E022C3A6DE00255EAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B03523922AE9D5600C65255 /* Err */ = {
+			isa = PBXGroup;
+			children = (
+				0B03523A22AE9D7900C65255 /* BaseError.swift */,
+			);
+			path = Err;
+			sourceTree = "<group>";
+		};
+		0B13263122A89C1C00B7FDBA = {
+			isa = PBXGroup;
+			children = (
+				0B13263D22A89C1C00B7FDBA /* FaspaySDK */,
+				0BC9FA6022C38D2F00A50883 /* TestFaspayUI */,
+				0BC9FA6C22C38E0B00A50883 /* FaspaySDKTests */,
+				0BFFB9C622C3A6DC00255EAF /* test */,
+				0BFFB9DB22C3A6DE00255EAF /* testTests */,
+				0BFFB9E622C3A6DE00255EAF /* testUITests */,
+				0B13263C22A89C1C00B7FDBA /* Products */,
+				1093351DE5C860081ED49BA0 /* Pods */,
+				A02327846FC6D5D25A1639A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0B13263C22A89C1C00B7FDBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B13263B22A89C1C00B7FDBA /* FaspaySDK.framework */,
+				0BC9FA6B22C38E0B00A50883 /* FaspaySDKTests.xctest */,
+				0BFFB9C522C3A6DC00255EAF /* test.app */,
+				0BFFB9D822C3A6DE00255EAF /* testTests.xctest */,
+				0BFFB9E322C3A6DE00255EAF /* testUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B13263D22A89C1C00B7FDBA /* FaspaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				0B13264722A89CE100B7FDBA /* SDK */,
+				0B13263E22A89C1C00B7FDBA /* FaspaySDK.h */,
+				0B13263F22A89C1C00B7FDBA /* Info.plist */,
+			);
+			path = FaspaySDK;
+			sourceTree = "<group>";
+		};
+		0B13264722A89CE100B7FDBA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				0B5B5A3422C3749500833DCE /* Credit */,
+				0B13264D22A89D3700B7FDBA /* Entity */,
+				0B13264822A89CEA00B7FDBA /* Rest */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		0B13264822A89CEA00B7FDBA /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				0B13264B22A89D0F00B7FDBA /* ApiService.swift */,
+				0B13265C22A89DE700B7FDBA /* FaspayService.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		0B13264D22A89D3700B7FDBA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				0B03523922AE9D5600C65255 /* Err */,
+				0B13264E22A89D4400B7FDBA /* FaspayUser.swift */,
+				0B13265022A89D5800B7FDBA /* CreateBilling.swift */,
+				0B13265222A89D7E00B7FDBA /* PaymentChannel.swift */,
+				0B13265622A89DAB00B7FDBA /* SHA1.swift */,
+				0B13265822A89DBD00B7FDBA /* PaymentStatus.swift */,
+				0B13265A22A89DCF00B7FDBA /* CancelPayment.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0B5B5A3422C3749500833DCE /* Credit */ = {
+			isa = PBXGroup;
+			children = (
+				0B5B5A3522C374D600833DCE /* ConfigCredit.swift */,
+				0BC9FA4B22C37F9500A50883 /* Capture.swift */,
+				0BC9FA4D22C383D900A50883 /* SB.swift */,
+				0BD2EE2222C46EE600AEE1FC /* Inquiry.swift */,
+				0BD2EE2422C4758D00AEE1FC /* Payment.swift */,
+				0BD2EE2622C4794800AEE1FC /* PaymentWrapper.swift */,
+				0BD2EE2822C4851800AEE1FC /* Refund.swift */,
+				0BD2EE2A22C489A500AEE1FC /* Void.swift */,
+			);
+			path = Credit;
+			sourceTree = "<group>";
+		};
+		0BC9FA6022C38D2F00A50883 /* TestFaspayUI */ = {
+			isa = PBXGroup;
+			children = (
+				0BC9FA6122C38D2F00A50883 /* TestFaspayUI.swift */,
+				0BC9FA6322C38D2F00A50883 /* Info.plist */,
+			);
+			path = TestFaspayUI;
+			sourceTree = "<group>";
+		};
+		0BC9FA6C22C38E0B00A50883 /* FaspaySDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BC9FA6D22C38E0B00A50883 /* FaspaySDKTests.swift */,
+				0BC9FA6F22C38E0B00A50883 /* Info.plist */,
+			);
+			path = FaspaySDKTests;
+			sourceTree = "<group>";
+		};
+		0BFFB9C622C3A6DC00255EAF /* test */ = {
+			isa = PBXGroup;
+			children = (
+				0BFFB9C722C3A6DD00255EAF /* AppDelegate.swift */,
+				0BFFB9C922C3A6DD00255EAF /* ViewController.swift */,
+				0BFFB9CB22C3A6DD00255EAF /* Main.storyboard */,
+				0BFFB9CE22C3A6DE00255EAF /* Assets.xcassets */,
+				0BFFB9D022C3A6DE00255EAF /* LaunchScreen.storyboard */,
+				0BFFB9D322C3A6DE00255EAF /* Info.plist */,
+				0BD2EE2022C46D7400AEE1FC /* Faspay.swift */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		0BFFB9DB22C3A6DE00255EAF /* testTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BFFB9DC22C3A6DE00255EAF /* testTests.swift */,
+				0BFFB9DE22C3A6DE00255EAF /* Info.plist */,
+			);
+			path = testTests;
+			sourceTree = "<group>";
+		};
+		0BFFB9E622C3A6DE00255EAF /* testUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0BFFB9E722C3A6DF00255EAF /* testUITests.swift */,
+				0BFFB9E922C3A6DF00255EAF /* Info.plist */,
+			);
+			path = testUITests;
+			sourceTree = "<group>";
+		};
+		1093351DE5C860081ED49BA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF58F84B8ADC5C57AAD627A2 /* Pods-FaspaySDK.debug.xcconfig */,
+				8F725002CD9A4B52AFA0BF76 /* Pods-FaspaySDK.release.xcconfig */,
+				F5D7F284C70D909953AD95DA /* Pods-test.debug.xcconfig */,
+				9C4E9CE7E849B4EDF474F778 /* Pods-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A02327846FC6D5D25A1639A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FE2C1BF8677ABB21C9718 /* Pods_FaspaySDK.framework */,
+				B1821FCBC432772DDE03FFB4 /* Pods_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B13263622A89C1C00B7FDBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B13264022A89C1C00B7FDBA /* FaspaySDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B13263A22A89C1C00B7FDBA /* FaspaySDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B13264322A89C1C00B7FDBA /* Build configuration list for PBXNativeTarget "FaspaySDK" */;
+			buildPhases = (
+				13D19A00896997AC217B59E4 /* [CP] Check Pods Manifest.lock */,
+				0B13263622A89C1C00B7FDBA /* Headers */,
+				0B13263722A89C1C00B7FDBA /* Sources */,
+				0B13263822A89C1C00B7FDBA /* Frameworks */,
+				0B13263922A89C1C00B7FDBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaspaySDK;
+			productName = FaspaySDK;
+			productReference = 0B13263B22A89C1C00B7FDBA /* FaspaySDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0BC9FA6A22C38E0B00A50883 /* FaspaySDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BC9FA7322C38E0B00A50883 /* Build configuration list for PBXNativeTarget "FaspaySDKTests" */;
+			buildPhases = (
+				0BC9FA6722C38E0B00A50883 /* Sources */,
+				0BC9FA6822C38E0B00A50883 /* Frameworks */,
+				0BC9FA6922C38E0B00A50883 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BC9FA7222C38E0B00A50883 /* PBXTargetDependency */,
+			);
+			name = FaspaySDKTests;
+			productName = FaspaySDKTests;
+			productReference = 0BC9FA6B22C38E0B00A50883 /* FaspaySDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0BFFB9C422C3A6DC00255EAF /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFFB9F022C3A6DF00255EAF /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				3A630509DE1A168B01605A6A /* [CP] Check Pods Manifest.lock */,
+				0BFFB9C122C3A6DC00255EAF /* Sources */,
+				0BFFB9C222C3A6DC00255EAF /* Frameworks */,
+				0BFFB9C322C3A6DC00255EAF /* Resources */,
+				0BD2EE1F22C45B9500AEE1FC /* Embed Frameworks */,
+				DE43DBD12D301A40186A0C4E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BD2EE1E22C45B9500AEE1FC /* PBXTargetDependency */,
+			);
+			name = test;
+			productName = test;
+			productReference = 0BFFB9C522C3A6DC00255EAF /* test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0BFFB9D722C3A6DE00255EAF /* testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFFB9F122C3A6DF00255EAF /* Build configuration list for PBXNativeTarget "testTests" */;
+			buildPhases = (
+				0BFFB9D422C3A6DE00255EAF /* Sources */,
+				0BFFB9D522C3A6DE00255EAF /* Frameworks */,
+				0BFFB9D622C3A6DE00255EAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BFFB9DA22C3A6DE00255EAF /* PBXTargetDependency */,
+			);
+			name = testTests;
+			productName = testTests;
+			productReference = 0BFFB9D822C3A6DE00255EAF /* testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0BFFB9E222C3A6DE00255EAF /* testUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFFB9F222C3A6DF00255EAF /* Build configuration list for PBXNativeTarget "testUITests" */;
+			buildPhases = (
+				0BFFB9DF22C3A6DE00255EAF /* Sources */,
+				0BFFB9E022C3A6DE00255EAF /* Frameworks */,
+				0BFFB9E122C3A6DE00255EAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BFFB9E522C3A6DE00255EAF /* PBXTargetDependency */,
+			);
+			name = testUITests;
+			productName = testUITests;
+			productReference = 0BFFB9E322C3A6DE00255EAF /* testUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B13263222A89C1C00B7FDBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "hilman anwarsah";
+				TargetAttributes = {
+					0B13263A22A89C1C00B7FDBA = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					0BC9FA6A22C38E0B00A50883 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0BFFB9C422C3A6DC00255EAF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0BFFB9D722C3A6DE00255EAF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0BFFB9C422C3A6DC00255EAF;
+					};
+					0BFFB9E222C3A6DE00255EAF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0BFFB9C422C3A6DC00255EAF;
+					};
+				};
+			};
+			buildConfigurationList = 0B13263522A89C1C00B7FDBA /* Build configuration list for PBXProject "FaspaySDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B13263122A89C1C00B7FDBA;
+			productRefGroup = 0B13263C22A89C1C00B7FDBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B13263A22A89C1C00B7FDBA /* FaspaySDK */,
+				0BC9FA6A22C38E0B00A50883 /* FaspaySDKTests */,
+				0BFFB9C422C3A6DC00255EAF /* test */,
+				0BFFB9D722C3A6DE00255EAF /* testTests */,
+				0BFFB9E222C3A6DE00255EAF /* testUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B13263922A89C1C00B7FDBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BC9FA6922C38E0B00A50883 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9C322C3A6DC00255EAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFFB9D222C3A6DE00255EAF /* LaunchScreen.storyboard in Resources */,
+				0BFFB9CF22C3A6DE00255EAF /* Assets.xcassets in Resources */,
+				0BFFB9CD22C3A6DD00255EAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9D622C3A6DE00255EAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9E122C3A6DE00255EAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13D19A00896997AC217B59E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaspaySDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A630509DE1A168B01605A6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE43DBD12D301A40186A0C4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-test/Pods-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B13263722A89C1C00B7FDBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC9FA4C22C37F9500A50883 /* Capture.swift in Sources */,
+				0B13265922A89DBD00B7FDBA /* PaymentStatus.swift in Sources */,
+				0BD2EE2522C4758D00AEE1FC /* Payment.swift in Sources */,
+				0B13265722A89DAB00B7FDBA /* SHA1.swift in Sources */,
+				0B5B5A3622C374D600833DCE /* ConfigCredit.swift in Sources */,
+				0BD2EE2322C46EE600AEE1FC /* Inquiry.swift in Sources */,
+				0B13265122A89D5800B7FDBA /* CreateBilling.swift in Sources */,
+				0BD2EE2722C4794800AEE1FC /* PaymentWrapper.swift in Sources */,
+				0B13265D22A89DE700B7FDBA /* FaspayService.swift in Sources */,
+				0B13264F22A89D4400B7FDBA /* FaspayUser.swift in Sources */,
+				0B13265B22A89DCF00B7FDBA /* CancelPayment.swift in Sources */,
+				0BD2EE2922C4851800AEE1FC /* Refund.swift in Sources */,
+				0BC9FA4E22C383D900A50883 /* SB.swift in Sources */,
+				0B13265322A89D7E00B7FDBA /* PaymentChannel.swift in Sources */,
+				0BD2EE2B22C489A500AEE1FC /* Void.swift in Sources */,
+				0B03523B22AE9D7900C65255 /* BaseError.swift in Sources */,
+				0B13264C22A89D0F00B7FDBA /* ApiService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BC9FA6722C38E0B00A50883 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC9FA6E22C38E0B00A50883 /* FaspaySDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9C122C3A6DC00255EAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD2EE2122C46D7400AEE1FC /* Faspay.swift in Sources */,
+				0BFFB9CA22C3A6DD00255EAF /* ViewController.swift in Sources */,
+				0BFFB9C822C3A6DD00255EAF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9D422C3A6DE00255EAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFFB9DD22C3A6DE00255EAF /* testTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFFB9DF22C3A6DE00255EAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFFB9E822C3A6DF00255EAF /* testUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BC9FA7222C38E0B00A50883 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B13263A22A89C1C00B7FDBA /* FaspaySDK */;
+			targetProxy = 0BC9FA7122C38E0B00A50883 /* PBXContainerItemProxy */;
+		};
+		0BD2EE1E22C45B9500AEE1FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B13263A22A89C1C00B7FDBA /* FaspaySDK */;
+			targetProxy = 0BD2EE1D22C45B9500AEE1FC /* PBXContainerItemProxy */;
+		};
+		0BFFB9DA22C3A6DE00255EAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BFFB9C422C3A6DC00255EAF /* test */;
+			targetProxy = 0BFFB9D922C3A6DE00255EAF /* PBXContainerItemProxy */;
+		};
+		0BFFB9E522C3A6DE00255EAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BFFB9C422C3A6DC00255EAF /* test */;
+			targetProxy = 0BFFB9E422C3A6DE00255EAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BFFB9CB22C3A6DD00255EAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BFFB9CC22C3A6DD00255EAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0BFFB9D022C3A6DE00255EAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BFFB9D122C3A6DE00255EAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B13264122A89C1C00B7FDBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B13264222A89C1C00B7FDBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0B13264422A89C1C00B7FDBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF58F84B8ADC5C57AAD627A2 /* Pods-FaspaySDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R9L5VTZD6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FaspaySDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.FaspaySDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B13264522A89C1C00B7FDBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F725002CD9A4B52AFA0BF76 /* Pods-FaspaySDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R9L5VTZD6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FaspaySDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.FaspaySDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0BC9FA7422C38E0B00A50883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaspaySDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.FaspaySDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0BC9FA7522C38E0B00A50883 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaspaySDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.FaspaySDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0BFFB9EA22C3A6DF00255EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5D7F284C70D909953AD95DA /* Pods-test.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9R9L5VTZD6;
+				INFOPLIST_FILE = test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0BFFB9EB22C3A6DF00255EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C4E9CE7E849B4EDF474F778 /* Pods-test.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9R9L5VTZD6;
+				INFOPLIST_FILE = test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0BFFB9EC22C3A6DF00255EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = testTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.testTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.app/test";
+			};
+			name = Debug;
+		};
+		0BFFB9ED22C3A6DF00255EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = testTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.testTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.app/test";
+			};
+			name = Release;
+		};
+		0BFFB9EE22C3A6DF00255EAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9R9L5VTZD6;
+				INFOPLIST_FILE = testUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.testUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = test;
+			};
+			name = Debug;
+		};
+		0BFFB9EF22C3A6DF00255EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9R9L5VTZD6;
+				INFOPLIST_FILE = testUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hilman.sintesa.id.testUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B13263522A89C1C00B7FDBA /* Build configuration list for PBXProject "FaspaySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B13264122A89C1C00B7FDBA /* Debug */,
+				0B13264222A89C1C00B7FDBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B13264322A89C1C00B7FDBA /* Build configuration list for PBXNativeTarget "FaspaySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B13264422A89C1C00B7FDBA /* Debug */,
+				0B13264522A89C1C00B7FDBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BC9FA7322C38E0B00A50883 /* Build configuration list for PBXNativeTarget "FaspaySDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BC9FA7422C38E0B00A50883 /* Debug */,
+				0BC9FA7522C38E0B00A50883 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BFFB9F022C3A6DF00255EAF /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFFB9EA22C3A6DF00255EAF /* Debug */,
+				0BFFB9EB22C3A6DF00255EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BFFB9F122C3A6DF00255EAF /* Build configuration list for PBXNativeTarget "testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFFB9EC22C3A6DF00255EAF /* Debug */,
+				0BFFB9ED22C3A6DF00255EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BFFB9F222C3A6DF00255EAF /* Build configuration list for PBXNativeTarget "testUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFFB9EE22C3A6DF00255EAF /* Debug */,
+				0BFFB9EF22C3A6DF00255EAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B13263222A89C1C00B7FDBA /* Project object */;
+}
