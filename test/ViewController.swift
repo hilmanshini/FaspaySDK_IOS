@@ -36,14 +36,17 @@ class ViewController: UIViewController {
             loadHtml(x: d.getHtml())
         
     }
+    
     func testVoid(){
-        let merchant_tranId = "9CDAA63D-BBD2-4BFF-9128-10DD3B348A30";
-        let tranId = "75CC5428-3A2C-496C-B28C-D2DFD2F57FE6";
-        let amount = 100000;
-
-            let d = VoidRequestWrapperProd(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
-            loadHtml(x: d.getHtml())
-        
+//        let e =         XMLParser;
+//        e.
+//        let merchant_tranId = "9CDAA63D-BBD2-4BFF-9128-10DD3B348A30";
+//        let tranId = "75CC5428-3A2C-496C-B28C-D2DFD2F57FE6";
+//        let amount = 100000;
+//
+//            let d = VoidRequestWrapperProd(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
+//            loadHtml(x: d.getHtml())
+//        
     }
     func testInquiry(){
         let tranId = "";
@@ -61,7 +64,7 @@ class ViewController: UIViewController {
         let configApp = FaspayPaymentCreditConfigApp(response_type: FaspayPaymentCredit.RESPONSE_TYPE_POST, return_url: "https://programmermiskin.chickenkiller.com/faspay/api/notify", mparam1: "", mparam2: "", frisk1: "", frisk2: "", handshake_url: "", handshake_param: "")
         let BillData = FaspayPaymentCreditBillData(billing_address: "123", billing_address_city: "123", billing_address_region: "123", billing_address_state: "123", billing_address_poscode: "123", billing_address_country_code: "ID")
         let shipData = FaspayPaymentCreditShippingdata(receiver_name_for_shipping: "5", shipping_address: "5", shipping_address_city: "5", shipping_address_region: "5", shipping_address_state: "5", shipping_address_poscode: "5", shipping_address_country_code: "5", shippingcost: "5")
-        let itemData = FaspayPaymentCreditItemData(mref1: "Baju Koko Robet")
+        let itemData = FaspayPaymentCreditItemData(mref1: "Racun Tikus",mref2:"Bubur Ayam",mref3 :"Pil KB")
         let domData = FaspayPaymentCreditDomicileData(domicile_address: "", domicile_address_city: "", domicile_address_region: "", domicile_address_state: "", domicile_address_poscode: "", domicile_address_country_code: "", domicile_phone_no: "")
         let cardData = FaspayPaymentCreditCardData(card_issuer_bank: "", card_identity_ref_type: "", card_identity_ref: "", card_phone: "", card_bill_addr: "", card_bill_addr_poscode: "", card_bill_addr_city: "", card_bill_addr_region: "", card_bill_addr_state: "", card_bill_addr_country_code: "", card_email: "")
 
