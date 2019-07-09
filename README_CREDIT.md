@@ -1,15 +1,7 @@
-# FaspaySDK_IOS
+# FaspaySDK_IOS_CREDIT
 
 
-
-Sdk for developing faspay API the platform that works with this SDK:
-
-    - iOS
-
-
-this sdk contains 2 parts of payment ,debit and credit, debit mostly use POST Rest API with json, all objects are wrapped
-for faspay credit - __[click here ](https://github.com/hilmanshini/FaspaySDK_IOS/blob/master/README_CREDIT.md)__ - 
-
+Faspay SDK Credit mostly use html to show form and user must fill the form
 
 
 # Faspay Debit 
@@ -17,133 +9,107 @@ to begin create the base service
 
 
 ```swift
+self.user = FaspayUserCredit();
+self.user.merchantId = "test_migs_f3ds";
+self.user.pass = "abcde";
+conf = FaspayConfigCreditProd();
+super.init(coder: coder)
+```
 
-//create user
-let user = FaspayUser(merchantName: "SINTESA", merchantId: "32254", userId: "bot32254", password: "p@ssw0rd", redirectUrl: "<#T##String#>")
-//create config dev or prod
-let config = FaspayConfigDev(withUser: user)
-let service = FaspayServiceImpl(config: config)
+and function to display html
 
 
+```swift
+func loadHtml(x:String?){
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+        let webView = WKWebView(frame: view.bounds, configuration: configuration)
+        if let HtmlNoNull:String = x{
+        //  let url = URL(string: "https://www.google.com")
+        //let urlRequest = URLRequest(url: url!)
+        print("DX = "+HtmlNoNull);
+        // enable JS
+        webView.configuration.preferences.javaScriptEnabled = true
+        webView.loadHTMLString(HtmlNoNull, baseURL: Bundle.main.bundleURL);
+        view.addSubview(webView)
+}
+
+```
+# Create Payment 
+create all objects
+```swift
+//create UUID for trans id
+let uuid = UUID.init().uuidString;
+let merchantTranId = "";
+//create transaction data
+let transData = FaspayPaymentCreditTransactionData(merchant_tranid: uuid, currencycode: "IDR", amount: 100000, usr: user, signature: "")
+//create shopper data
+let shopperData = FaspayPaymentCreditShopperData(custname: "ha", custemail: "haha@haha.com", shopper_ip: "123123123", description: "123123123", cardno: "112312313", cardname: "123123", cardtype: FaspayPaymentCredit.CARD_TYPE_VISA, expirymonth: "10", expiryyear: "2020", cardcvc: "123123123", card_issuer_bank_country_code: "", phone_no: "", customer_ref: "")
+let configApp = FaspayPaymentCreditConfigApp(response_type: FaspayPaymentCredit.RESPONSE_TYPE_POST, return_url: "https://programmermiskin.chickenkiller.com/faspay/api/notify", mparam1: "", mparam2: "", frisk1: "", frisk2: "", handshake_url: "", handshake_param: "")
+let BillData = FaspayPaymentCreditBillData(billing_address: "123", billing_address_city: "123", billing_address_region: "123", billing_address_state: "123", billing_address_poscode: "123", billing_address_country_code: "ID")
+let shipData = FaspayPaymentCreditShippingdata(receiver_name_for_shipping: "5", shipping_address: "5", shipping_address_city: "5", shipping_address_region: "5", shipping_address_state: "5", shipping_address_poscode: "5", shipping_address_country_code: "5", shippingcost: "5")
+let itemData = FaspayPaymentCreditItemData(mref1: "Racun Tikus",mref2:"Bubur Ayam",mref3 :"Pil KB")
+let domData = FaspayPaymentCreditDomicileData(domicile_address: "", domicile_address_city: "", domicile_address_region: "", domicile_address_state: "", domicile_address_poscode: "", domicile_address_country_code: "", domicile_phone_no: "")
+let cardData = FaspayPaymentCreditCardData(card_issuer_bank: "", card_identity_ref_type: "", card_identity_ref: "", card_phone: "", card_bill_addr: "", card_bill_addr_poscode: "", card_bill_addr_city: "", card_bill_addr_region: "", card_bill_addr_state: "", card_bill_addr_country_code: "", card_email: "")
+
+let w = FaspayPaymentCreditWrapperProd(user: user, transactionData: transData, shopperData: shopperData, app: configApp, billData: BillData, shippingdata: shipData, itemData: itemData, domicileData: domData, cardData: cardData)
+
+if w.merchantid == nil{
+print("nil")
+} else {
+print("ndata = "+w.merchantid!);
+loadHtml(x: w.getHtml());
+
+}
 
 ```
 
 
-# Inquiry Payment Channel
+# Refund  Payment
 
-to get list of payment channel
 
 ```swift
-//create callback
-class callbackInquirt : FaspayInquiryServiceCallback{
-    func onErrorGetPaymentChannel(e: Error) {
+let merchant_tranId = "";
+let tranId = "";
+let amount = 100000;
 
-    }
-    func onUserNotRegistered(ur: UnregisteredError) {
+let d = RefundRequestWrapperDev(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "ha@ha.com", CUSTEMAIL: "ha@ha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com", REFUND_AMOUNT: 100000)
+loadHtml(x: d.getHtml())
+```
 
-    }
-    func onGetPaymentChannel(channel: [FaspayPaymentChannel]) {
-    print(channel.count)
-    }
+# Void Payment 
 
-//
-service.inquiryPaymentChannel(mCallback: callbackInquirt())
+
+```swift
+let merchant_tranId = "9CDAA63D-BBD2-4BFF-9128-10DD3B348A30";
+let tranId = "75CC5428-3A2C-496C-B28C-D2DFD2F57FE6";
+let amount = 100000;
+
+let d = VoidRequestWrapperProd(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
+loadHtml(x: d.getHtml())
 ```
 
 
-# Create Payment
+# Inquiry Payment
 ```swift
-//create callback
-class callback:FaspayCreateBillingServiceCallback{
-    func onErrorGetPaymentResponse(e: Error) {
-    print("error");
+let tranId = "";
 
-    }
-    func onUserNotRegistered(ur: UnregisteredError) {
-    print("unreg");
-    }
-    func onGetPaymentResponse(response: FaspayPaymentResponse) {
-    print("get response '");
-    }
-}
-
-// mock channel or get from inquiry
-var mockChannel = FaspayPaymentChannel()
-mockChannel.pg_code = "402"
-mockChannel.pg_name = "Alpha"
-
-//create the list of items
-var items:[FaspayPayment] = []
-items.append(FaspayPayment(product: "Item 1", qty: "1", amount: "100000", payment_plan: FaspayPayment.PAYMENT_PLAN_INSTALLMENT, merchant_id: config.faspayUser.merchantId, tenor: FaspayPayment.TENOR_6MONTHS))
-items.append(FaspayPayment(product: "Item 2", qty: "1", amount: "100000", payment_plan: FaspayPayment.PAYMENT_PLAN_INSTALLMENT, merchant_id: config.faspayUser.merchantId, tenor: FaspayPayment.TENOR_6MONTHS))
-items.append(FaspayPayment(product: "Item 3", qty: "1", amount: "100000", payment_plan: FaspayPayment.PAYMENT_PLAN_INSTALLMENT, merchant_id: config.faspayUser.merchantId, tenor: FaspayPayment.TENOR_6MONTHS))
-
-
-//create bill data
-let bill_data = FaspayPaymentRequestBillData(billNo: "123123", billDesc: "x", expiredDayInterval: 10, billTotal: "100000", items: items)
-//create user data
-let user_bill_data = FaspayPaymentRequestUserData(msisdn: "08123123", email: "hil@hil.com", terminal: String(FaspayPaymentRequestWrapper.TERMINAL_TAB_APP_ANDROID), custNo: "123123", custName: "hahaha")
-//create shipping data
-let user_shipping_data = FaspayPaymentRequestShippingData()
-
-//wrap and send
-if let xlet = FaspayPaymentRequestWrapper(config: config, bill_data: bill_data, pc: mockChannel, userdata: user_bill_data, shippingData: user_shipping_data) {
-xlet.pay_type = String(FaspayPaymentRequestWrapper.PAY_TYPE_INSTALLMENT)
-service.createBilling(mFaspayPaymentRequest: xlet, mCallback: callback())
-
-}
-
-
+let d =             InquiryRequestCreditWrapper(configCredit: conf  , user: user, MERCHANT_TRANID: tranId, amount: 100000)
+loadHtml(x: d.getHtml())
 ```
 
 
-# Inquiry payment status
+
+# Capture Payment
+
 
 ```swift
-class callbackStatusPayment:FaspayInquiryPaymentStatusCallback{
-        func onErrorGetInquiryPaymentStatusResponse(e: Error) {
-        print("error ");
-        }
-        func onGetInquiryPaymentStatusResponse(response: FaspayPaymentStatusResponse) {
-        print("success ");
-        }
-        func onUserNotRegistered(ur: UnregisteredError) {
-        print("unreg");
-        }
-}
-
-let trxId = "8986322540000976"
-let bill_no = "123123"
-let user = FaspayUser(merchantName: "SINTESA", merchantId: "32254", userId: "bot32254", password: "p@ssw0rd", redirectUrl: "T##String")
-
-let config = FaspayConfigDev(withUser: user)
-let service = FaspayServiceImpl(config: config)
-if let reqStatus = FaspayPaymentStatusRequestWrapper(request: "", trxId: trxId, bill_no: bill_no, config: config){
-service.inqueryPaymentStatus(mRequest: reqStatus, mCallback: callbackStatusPayment())
-}
-```
+let d = CaptureRequestWrapperProd(user: user, MERCHANT_TRANID: "c0f4dbe47d27490e81a03ee771be6b47", TRANSACTIONID: "110B90DB-DA6C-4FEC-8ACD-C1DBF78A2E61", AMOUNT: 10000, CUSTNAME: "dddd", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "1231231231331", RETURN_URL: "https://programmermiskin.chickenkiller.com/faspay/api/notify");
 
 
-# Cancel Payment
-```swift
-class callbackCancen : FaspayCancelPaymentCallback{
-    func onCancelPaymentSuccess(channel: FaspayCancelPaymentResponse) {
 
-    }
-    func onUserNotRegistered(ur: UnregisteredError) {
-
-    }
-    func onErrorRequstCancelPayment(e: Error) {
-    print(e)
-    }
-}
-let trxId = "8986322540000976"
-let bill_no = "123123"
-let user = FaspayUser(merchantName: "SINTESA", merchantId: "32254", userId: "bot32254", password: "p@ssw0rd", redirectUrl: "T##String")
-
-let config = FaspayConfigDev(withUser: user)
-let service = FaspayServiceImpl(config: config)
-
-let reqCancel = FaspayCancelPaymentRequestWrapper(trxId: trxId, billNo: bill_no, paymentCancel: "tttttt ", mFaspayConfig: config)
-service.cancelTransaction(mFaspayCancelPaymentRequest: reqCancel, mCallback: callbackCancen())
+let x = d.getHtml();
+loadHtml(x: x);
 ```

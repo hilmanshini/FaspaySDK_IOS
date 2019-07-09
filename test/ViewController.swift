@@ -40,13 +40,13 @@ class ViewController: UIViewController {
     func testVoid(){
 //        let e =         XMLParser;
 //        e.
-//        let merchant_tranId = "9CDAA63D-BBD2-4BFF-9128-10DD3B348A30";
-//        let tranId = "75CC5428-3A2C-496C-B28C-D2DFD2F57FE6";
-//        let amount = 100000;
-//
-//            let d = VoidRequestWrapperProd(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
-//            loadHtml(x: d.getHtml())
-//        
+        let merchant_tranId = "9CDAA63D-BBD2-4BFF-9128-10DD3B348A30";
+        let tranId = "75CC5428-3A2C-496C-B28C-D2DFD2F57FE6";
+        let amount = 100000;
+
+            let d = VoidRequestWrapperProd(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
+            loadHtml(x: d.getHtml())
+        
     }
     func testInquiry(){
         let tranId = "";
