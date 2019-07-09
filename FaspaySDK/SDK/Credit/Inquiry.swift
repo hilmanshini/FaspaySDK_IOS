@@ -87,7 +87,8 @@ public class InquiryRequestCreditWrapper:InquiryRequestCredit{
         self.merchantid = user.merchantId;
         self.payment_method = "1";
         if let nmid = user.merchantId , let npass = user.pass,let namount = self.amount{
-            var rawSig = "##"+nmid+"##"+npass+"##"+MERCHANT_TRANID+"##"+namount+"##0##";
+            var rawSig = "##"+nmid.uppercased()+"##"+npass.uppercased()+"##"+MERCHANT_TRANID+"##"+namount+"##0##";
+            print(rawSig)
             let sha1 = SHA1.hexString(from: rawSig);
             if let nsha1 = sha1{
                 self.signature = nsha1.replacingOccurrences(of: " ", with: "").lowercased()

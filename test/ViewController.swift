@@ -14,16 +14,16 @@ class ViewController: UIViewController {
     var conf :FaspayConfigCredit;
     public required init?(coder: NSCoder) {
         self.user = FaspayUserCredit();
-        self.user.merchantId = "test_migs_f3ds";
+        self.user.merchantId = "commonwealth";
         self.user.pass = "abcde";
-        conf = FaspayConfigCreditProd();
+        conf = FaspayConfigCreditDev();
         super.init(coder: coder)
 
     }
 //    private var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        testVoid()
+        testInquiry()
         
 
     }
@@ -40,16 +40,16 @@ class ViewController: UIViewController {
     func testVoid(){
 //        let e =         XMLParser;
 //        e.
-        let merchant_tranId = "9CDAA63D-BBD2-4BFF-9128-10DD3B348A30";
-        let tranId = "75CC5428-3A2C-496C-B28C-D2DFD2F57FE6";
+        let merchant_tranId = "39565014-1ED0-4933-B7C0-FC2031E0130C";
+        let tranId = "84DBA1CA-051F-4CFD-A020-DDBB94498276";
         let amount = 100000;
 
-            let d = VoidRequestWrapperProd(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
+            let d = VoidRequestWrapperDev(user: user, MERCHANT_TRANID: merchant_tranId, TRANSACTIONID: tranId, AMOUNT: amount, CUSTNAME: "haha@haha.com", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "123123", RETURN_URL: "http://www.google.com")
             loadHtml(x: d.getHtml())
         
     }
     func testInquiry(){
-        let tranId = "";
+        let tranId = "39565014-1ED0-4933-B7C0-FC2031E0130C";
         
             let d =             InquiryRequestCreditWrapper(configCredit: conf  , user: user, MERCHANT_TRANID: tranId, amount: 100000)
             loadHtml(x: d.getHtml())
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         let domData = FaspayPaymentCreditDomicileData(domicile_address: "", domicile_address_city: "", domicile_address_region: "", domicile_address_state: "", domicile_address_poscode: "", domicile_address_country_code: "", domicile_phone_no: "")
         let cardData = FaspayPaymentCreditCardData(card_issuer_bank: "", card_identity_ref_type: "", card_identity_ref: "", card_phone: "", card_bill_addr: "", card_bill_addr_poscode: "", card_bill_addr_city: "", card_bill_addr_region: "", card_bill_addr_state: "", card_bill_addr_country_code: "", card_email: "")
 
-            let w = FaspayPaymentCreditWrapperProd(user: user, transactionData: transData, shopperData: shopperData, app: configApp, billData: BillData, shippingdata: shipData, itemData: itemData, domicileData: domData, cardData: cardData)
+            let w = FaspayPaymentCreditWrapperDev(user: user, transactionData: transData, shopperData: shopperData, app: configApp, billData: BillData, shippingdata: shipData, itemData: itemData, domicileData: domData, cardData: cardData)
 
             if w.merchantid == nil{
                 print("nil")
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         
     }
     func testCapture(){
-        let d = CaptureRequestWrapperProd(user: user, MERCHANT_TRANID: "c0f4dbe47d27490e81a03ee771be6b47", TRANSACTIONID: "110B90DB-DA6C-4FEC-8ACD-C1DBF78A2E61", AMOUNT: 10000, CUSTNAME: "dddd", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "1231231231331", RETURN_URL: "https://programmermiskin.chickenkiller.com/faspay/api/notify");
+        let d = CaptureRequestWrapperDev(user: user, MERCHANT_TRANID: "39565014-1ED0-4933-B7C0-FC2031E0130C", TRANSACTIONID: "84DBA1CA-051F-4CFD-A020-DDBB94498276", AMOUNT: 10000, CUSTNAME: "dddd", CUSTEMAIL: "haha@haha.com", DESCRIPTION: "1231231231331", RETURN_URL: "https://programmermiskin.chickenkiller.com/faspay/api/notify");
 
 
         
